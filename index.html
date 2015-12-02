@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/custombootstrap.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="lib/octicons/octicons/octicons.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="lib/site.css" media="screen" title="no title" charset="utf-8">
   </head>
-  <body ng-app="gitHubDataController">
+  <body ng-controller="gitHubDataController">
+    <h1 class="text-center">
+      <span />{{userData.name}}</span>
+      <br>
+      <a href="{{userData.html_url}}" class="btn btn-default">
+        <span class="oction octicon-octoface"></span>
+        {{userData.login}}
+      </a>
+    </h1>
   </body>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="lib/angular/angular.min.js" charset="utf-8"></script>
+  <script src="app/app.js" charset="utf-8"></script>
 </html>
